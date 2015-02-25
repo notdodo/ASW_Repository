@@ -1,10 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%  boolean logged = false;
     boolean loginResult;
-    // Firefox bug for tomcat: NEED TO SET JSESSIONID COOKIE
-    Cookie id = new Cookie("JSESSIONID", session.getId());
-    id.setMaxAge(60 * 60);
-    response.addCookie(id);
     // Controllo se i cookies sono settati
     if (request.getCookies() != null) {
         Cookie[] cookie = request.getCookies();
@@ -13,6 +9,10 @@
                 logged = cook.getValue().equals("1") ? true : false;
             }
             if (cook.getName().equals("user")) {
+                // Firefox bug for tomcat: NEED TO SET JSESSIONID COOKIE
+    			Cookie id = new Cookie("JSESSIONID", session.getId());
+    			id.setMaxAge(60 * 60);
+    			response.addCookie(id);
                 session.setAttribute("user", cook.getValue());
             }
         }
