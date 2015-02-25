@@ -1,0 +1,392 @@
+html {
+    box-sizing: border-box;
+    font-family: "Droid Sans", sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/background.png");
+}
+
+a {
+    text-decoration: none;
+    color: #F04949;
+    font-weight: bold;
+}
+
+header {
+    background: url("img/banner.png") no-repeat center top fixed, url("img/grid.jpeg") repeat-x fixed;
+    border-bottom: 5px solid black;
+}
+
+.animation {
+    -moz-animation-name: dropHeader;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-duration: 0.5s;
+
+    -webkit-animation-name: dropHeader;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 0.5s;
+
+    animation-name: dropHeader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+.vertcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%); /* For mozilla support */
+    -webkit-transform: translateY(-50%); /* For safari support */
+    -ms-transform: translateY(-50%); /* For IE support */
+    -o-transform: translateY(-50%); /* For opera support */
+}
+
+header .logo img {
+    margin-top: 10px;
+    float: left;
+    width: 5.5em;
+}
+
+header a h1 {
+    display: inline-block;
+    color: #497495;
+    font-size: 2em;
+    margin: 10px;
+    text-shadow:
+        1px 1px 0 #CCC,
+        2px 2px 0 #CCC,
+        3px 3px 0 #444,
+        4px 4px 0 #444,
+        5px 5px 0 #444;
+}
+
+footer, header {
+    padding: 0.1em 0.1em 0.1em 1em;
+}
+
+.left-column, .right-column, .menu-nav {
+    border: 1px solid #ccc;
+    padding: 1.1em;
+    padding-top: 0.6em;
+    margin: .5em;
+    background: #497495;
+}
+
+.left-column, .right-column {
+    min-height: 100%;
+}
+
+.menu-nav {
+    clear: both;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 0px 2px 0px -10px;
+}
+
+.right-column {
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.right-column h6, .right-column p{
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+}
+
+.right-column h6 {
+    margin-left: 5px;
+}
+
+.right-column a {
+    color: #444;
+}
+
+.left-column {
+    color: black;
+    background: #F2F2F2;
+    border-radius: 10px;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav > li, .nav > li > a {
+    margin: 0;
+    display: inline-block;
+    color: white;
+}
+
+.nav > li > a {
+    padding: 0em 0.4em 0em 0.4em;
+}
+
+.nav > li > a:hover {
+    background: #1ABC9C;
+    border-radius: 2em;
+}
+
+.nav > .selected a {
+    text-decoration: underline;
+}
+
+.inline-items, .inline-items li {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.inline-items li:first-child {
+}
+
+.inline-items li:last-child {
+    padding-right: 0;
+}
+
+footer {
+    color: white;
+    clear: both;
+    text-align: right;
+    border-top: 5px solid black;
+    background: url("img/banner.png") no-repeat center bottom fixed, url("img/grid.jpeg") repeat-x center bottom fixed;
+}
+
+footer a {
+    color: #F04949;
+}
+
+footer img {
+    height: 2em;
+}
+
+footer p {
+    margin-right: 10px;
+}
+
+#banner {
+    border-radius: 30px 0px 30px 30px;
+    border: 3px solid white;
+    color: white;
+    position: fixed;
+    background: #203748;
+    padding-left: 1.5em;
+    left: 35%;
+    top: 18%;
+    width: 400px;
+    height: 300px;
+    visibility: hidden;
+}
+
+#banner a {
+    position: relative;
+    top: 1%;
+    left: 95%;
+    font-size: 1.2em;
+}
+
+button {
+    margin: 1.2em 1em 1em 0em;
+    padding: 0.8em 2.2em 0.8em 2.2em;
+    background: #3498db;
+    border: none;
+    border-radius: 0.5em;
+    font-weight: bolder;
+    color: white;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.9);
+    -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.9);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.9); 
+}
+
+button:active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+input, #banner input {
+    border: none;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+
+.register {
+    text-align: center;
+}
+
+.register label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+
+.register input {
+    height: 2em;
+    margin: 5px 15px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 0 10px #ddd;
+}
+
+.user-menu {
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    color: #F04949;
+}
+
+.show .grid {
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #F04949;
+    border-radius: 10%;
+    float: left;
+}
+
+.show .grid:hover {
+    box-shadow:
+        1px 1px 0 #CCC,
+        2px 2px 0 #CCC,
+        3px 3px 0 #444,
+        4px 4px 0 #444,
+        5px 5px 0 #444,
+        6px 6px 0 #444;
+}
+
+.show .grid:active {
+    box-shadow: none;
+}
+
+.show .grid img {
+    border-radius: 0%;
+    width: 265px;
+    height: 150px;
+}
+
+.show .grid p {
+    color: black;
+    text-align: center;
+}
+
+.show .grid p:first-child {
+    color: #F04949;
+}
+
+.show p label {
+    margin: 30px;
+}
+
+.show > img {
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.show input {
+    border: 1px solid #3498db;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 50em ) {
+    .menu-nav {
+        width: auto;
+    }
+
+    .columns-container {
+        float: left;
+        width: 100%;
+    }
+
+    .left-column {
+        float: left;
+    }
+
+    .right-column {
+        width: 18.75em;
+        margin-left: -19.3em;
+        float: right;
+    }
+
+    .register button {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 569px) {
+    .left-column, .right-column {
+        clear: both;
+    }
+    
+    .show {
+        clear: both;
+        display: block;
+    }
+    
+    .show .grid {
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 0.7em;
+    }
+    
+    header, .show .grid {
+        text-align: center;
+    }
+
+    header .logo img, .show .grid {
+        float: none;
+    }
+
+    .menu-nav {
+        display: block;
+    }
+
+    #banner * {
+        margin: 0;
+        padding: 0.1em;
+    }
+
+    #banner {
+        font-size: 0.8em;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+        border-width: 1px;
+        top: 18%;
+        left: 30%;
+        border-radius: 10%;
+    }
+    
+    #banner button {
+        margin-top: 3px;
+        font-size: 0.8em;
+    }
+}
+
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-4em);
+    }
+}
+
+@-webkit-keyframes dropHeader {
+    0% {
+        transform: translateY(-4em);
+    }
+}
+
+@-ms-keyframes dropHeader {
+    0% {
+        transform: translateY(-4em);
+    }
+}

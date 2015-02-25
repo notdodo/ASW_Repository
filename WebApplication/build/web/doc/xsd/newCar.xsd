@@ -1,0 +1,20 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="newCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="data"/>
+        <xs:element type="xs:string" name="utente"/>
+        <xs:element type="xs:string" name="marca"/>
+        <xs:element type="xs:string" name="modello"/>
+        <xs:element type="xs:int" name="km"/>
+        <xs:element type="xs:short" name="anno"/>
+        <xs:element type="xs:string" name="carburante"/>
+        <xs:element type="xs:string" name="cilindrata"/>
+        <xs:element type="xs:short" name="prezzo"/>
+        <xs:element type="xs:string" name="note"/>
+        <xs:element type="xs:string" name="ultimaOfferta"/>
+        <xs:element type="xs:string" name="img"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

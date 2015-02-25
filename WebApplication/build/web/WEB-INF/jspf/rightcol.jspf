@@ -1,0 +1,5 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<div class="right-column" id="right-column">
+</div>
+<script>send("<recentCars></recentCars>", "right-column");</script>

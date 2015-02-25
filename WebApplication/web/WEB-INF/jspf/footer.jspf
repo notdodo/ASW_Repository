@@ -1,0 +1,25 @@
+</div> <!-- columns-container -->
+
+<div id="banner">
+    <a href="" onmousedown="setHidden('banner');">X</a>
+    <h2>Sign In</h2>
+    <form action="service" method="POST" accept-charset="utf-8">
+        <input type="hidden" name="submitPost" value="login">
+        <p>Nickname or Email</p>
+        <input type="text" name="user" value="" autofocus required>
+        <p>Password</p>
+        <input type="password" name="password" value="" required><br/>
+        <button value="submit" name="submit">Sign In</button>
+    </form>
+</div>
+
+<script type="text/javascript">resize(${param["logged"]});</script>
+
+<footer>
+    <p>Design by <a href="mailto:edoardo.rosa@studio.unibo.it">Edoardo Rosa</a>,
+        <a href="mailto:roberto.delia3@studio.unibo.it">Roberto D'Elia</a>,
+        <a href="mailto:federico.torsello@studio.unibo.it">Federico Torsello</a> | &copy; 2015</p>
+</footer>
+
+</body>
+</html>

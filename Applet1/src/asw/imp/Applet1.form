@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JAppletFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JOptionPane" name="jOptionPane1">
+      <Properties>
+        <Property name="message" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Errore di inserimento&quot;" type="code"/>
+        </Property>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursore predefinito"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="jFileChooser1">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[400, 530]"/>
+    </Property>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[400, 530]"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[400, 530]"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,34,0,0,1,-82"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f2" green="f2" red="f2" type="rgb"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 530]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 530]"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+          <BorderConstraints direction="Center"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                  <Component id="jLabelDescrizione" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jButtonInserimentoImg" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLBaseAsta" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLKmPercorsi" alignment="0" pref="121" max="32767" attributes="0"/>
+                              <Component id="jLCilindrata" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLAnnoProduz" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLCarburante" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLNumPorte" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLColore" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLTipologia" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLModello" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLMarca" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jComboBoxNumPorte" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jComboBoxCarburante" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jComboBoxAnnoProduz" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jTextFieldKmPercorsi" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jTextFieldBaseAsta" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jComboBoxMarca" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jTextFieldModello" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jComboBoxColore" alignment="1" pref="285" max="32767" attributes="0"/>
+                              <Component id="jTextFieldCilindrata" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jComboBoxTipologia" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jTextFieldInserimentoImg" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonInvioDati" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLMarca" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBoxMarca" min="-2" pref="27" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jTextFieldModello" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jLModello" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLTipologia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBoxTipologia" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jComboBoxColore" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jLColore" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jComboBoxNumPorte" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jLNumPorte" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jComboBoxCarburante" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jLCarburante" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jComboBoxAnnoProduz" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jLAnnoProduz" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLCilindrata" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldCilindrata" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jTextFieldKmPercorsi" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jLKmPercorsi" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jTextFieldBaseAsta" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jLBaseAsta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabelDescrizione" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonInserimentoImg" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTextFieldInserimentoImg" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonInvioDati" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="2" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f2" green="f2" red="f2" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Inserisci le info della tua auto"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLMarca">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Marca"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLModello">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modello"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLColore">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Colore"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLNumPorte">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N. Porte"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLCarburante">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Carburante"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLAnnoProduz">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Anno Produzione"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLBaseAsta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Base d&apos;asta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLKmPercorsi">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Km percorsi"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBoxTipologia">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="9">
+                <StringItem index="0" value="Berlina"/>
+                <StringItem index="1" value="Cabriolet"/>
+                <StringItem index="2" value="City car"/>
+                <StringItem index="3" value="Epoca"/>
+                <StringItem index="4" value="Fuoristrada"/>
+                <StringItem index="5" value="Monovolume"/>
+                <StringItem index="6" value="Sportiva"/>
+                <StringItem index="7" value="Station wagon"/>
+                <StringItem index="8" value=" "/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBoxMarca">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="31">
+                <StringItem index="0" value="FIAT"/>
+                <StringItem index="1" value="Abarth"/>
+                <StringItem index="2" value="Acura"/>
+                <StringItem index="3" value="Alfa Romeo"/>
+                <StringItem index="4" value="Audi"/>
+                <StringItem index="5" value="Bentley"/>
+                <StringItem index="6" value="BMW"/>
+                <StringItem index="7" value="Buick"/>
+                <StringItem index="8" value="BYD"/>
+                <StringItem index="9" value="Cadillac"/>
+                <StringItem index="10" value="Chevrolet"/>
+                <StringItem index="11" value="Citro&#xeb;n"/>
+                <StringItem index="12" value="Dacia"/>
+                <StringItem index="13" value="Daewoo"/>
+                <StringItem index="14" value="Daihatsu"/>
+                <StringItem index="15" value="Dodge"/>
+                <StringItem index="16" value="Ford"/>
+                <StringItem index="17" value="Honda"/>
+                <StringItem index="18" value="Hyundai"/>
+                <StringItem index="19" value="Jeep"/>
+                <StringItem index="20" value="Kia"/>
+                <StringItem index="21" value="Land Rover"/>
+                <StringItem index="22" value="Lancia"/>
+                <StringItem index="23" value="Nissan"/>
+                <StringItem index="24" value="Opel"/>
+                <StringItem index="25" value="Peugeut"/>
+                <StringItem index="26" value="Renault"/>
+                <StringItem index="27" value="Smart"/>
+                <StringItem index="28" value="Toyota"/>
+                <StringItem index="29" value="Volkswagen"/>
+                <StringItem index="30" value="Volvo"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBoxColore">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="193">
+                <StringItem index="0" value="Acquamarina"/>
+                <StringItem index="1" value="Amaranto"/>
+                <StringItem index="2" value="Ambra"/>
+                <StringItem index="3" value="Ametista"/>
+                <StringItem index="4" value="Arancione"/>
+                <StringItem index="5" value="Arancione fiamma"/>
+                <StringItem index="6" value="Ardesia"/>
+                <StringItem index="7" value="Argento"/>
+                <StringItem index="8" value="Asparago"/>
+                <StringItem index="9" value="Avorio"/>
+                <StringItem index="10" value="Azzurro"/>
+                <StringItem index="11" value="Azzurro fiordaliso"/>
+                <StringItem index="12" value="Azzurro Savoia"/>
+                <StringItem index="13" value="Beige"/>
+                <StringItem index="14" value="Beige-oliva chiaro"/>
+                <StringItem index="15" value="Bianco"/>
+                <StringItem index="16" value="Bianco antico"/>
+                <StringItem index="17" value="Biscotto"/>
+                <StringItem index="18" value="Bistro"/>
+                <StringItem index="19" value="Blu"/>
+                <StringItem index="20" value="Blu acciaio"/>
+                <StringItem index="21" value="Blu alice"/>
+                <StringItem index="22" value="Blu Bondi"/>
+                <StringItem index="23" value="Blu Cadetto"/>
+                <StringItem index="24" value="Blu ceruleo"/>
+                <StringItem index="25" value="Blu di Persia"/>
+                <StringItem index="26" value="Blu Dodger"/>
+                <StringItem index="27" value="Blu elettrico"/>
+                <StringItem index="28" value="Blu Klein"/>
+                <StringItem index="29" value="Blu marino"/>
+                <StringItem index="30" value="Blu oltremare"/>
+                <StringItem index="31" value="Blu reale"/>
+                <StringItem index="32" value="Bordeaux"/>
+                <StringItem index="33" value="Bronzo"/>
+                <StringItem index="34" value="Bronzo antico"/>
+                <StringItem index="35" value="Cacca"/>
+                <StringItem index="36" value="Camoscio"/>
+                <StringItem index="37" value="Carbone"/>
+                <StringItem index="38" value="Carminio"/>
+                <StringItem index="39" value="Carta di zucchero"/>
+                <StringItem index="40" value="Castagno"/>
+                <StringItem index="41" value="Castagno scuro"/>
+                <StringItem index="42" value="Castagno chiaro"/>
+                <StringItem index="43" value="Catrame"/>
+                <StringItem index="44" value="Catrame scuro"/>
+                <StringItem index="45" value="Celadon"/>
+                <StringItem index="46" value="Celeste"/>
+                <StringItem index="47" value="Ceruleo"/>
+                <StringItem index="48" value="Ceruleo scuro"/>
+                <StringItem index="49" value="Chartreuse"/>
+                <StringItem index="50" value="Ciano"/>
+                <StringItem index="51" value="Ciliegia"/>
+                <StringItem index="52" value="Cioccolato"/>
+                <StringItem index="53" value="Conchiglia"/>
+                <StringItem index="54" value="Corallo"/>
+                <StringItem index="55" value="Crema"/>
+                <StringItem index="56" value="Cremisi"/>
+                <StringItem index="57" value="Denim"/>
+                <StringItem index="58" value="Denim chiaro"/>
+                <StringItem index="59" value="Eliotropo"/>
+                <StringItem index="60" value="Ecru"/>
+                <StringItem index="61" value="Fiore di granturco"/>
+                <StringItem index="62" value="Foglia di t&#xe8;"/>
+                <StringItem index="63" value="Fucsia"/>
+                <StringItem index="64" value="Fucsia pallido"/>
+                <StringItem index="65" value="Giada"/>
+                <StringItem index="66" value="Giallo"/>
+                <StringItem index="67" value="Giallo Napoli"/>
+                <StringItem index="68" value="Giallo pastello"/>
+                <StringItem index="69" value="Giallo scuolabus"/>
+                <StringItem index="70" value="Glicine"/>
+                <StringItem index="71" value="Glicine"/>
+                <StringItem index="72" value="Grano"/>
+                <StringItem index="73" value="Granata"/>
+                <StringItem index="74" value="Grigio"/>
+                <StringItem index="75" value="Grigio asparago"/>
+                <StringItem index="76" value="Grigio ardesia scuro"/>
+                <StringItem index="77" value="Grigio cenere"/>
+                <StringItem index="78" value="Grigio rosso chiaro"/>
+                <StringItem index="79" value="Grigio t&#xe9; verde"/>
+                <StringItem index="80" value="Incarnato prugna"/>
+                <StringItem index="81" value="Indaco"/>
+                <StringItem index="82" value="Indaco elettrico"/>
+                <StringItem index="83" value="Indaco scuro"/>
+                <StringItem index="84" value="International Klein Blue"/>
+                <StringItem index="85" value="Kaki"/>
+                <StringItem index="86" value="Kaki scuro"/>
+                <StringItem index="87" value="Lampone"/>
+                <StringItem index="88" value="Lavanda"/>
+                <StringItem index="89" value="Lavanda pallido"/>
+                <StringItem index="90" value="Lavanda rosata"/>
+                <StringItem index="91" value="Limone"/>
+                <StringItem index="92" value="Limone Crema"/>
+                <StringItem index="93" value="Lilla"/>
+                <StringItem index="94" value="Lime"/>
+                <StringItem index="95" value="Lino"/>
+                <StringItem index="96" value="Magenta"/>
+                <StringItem index="97" value="Magenta chiaro"/>
+                <StringItem index="98" value="Malva"/>
+                <StringItem index="99" value="Malva chiaro"/>
+                <StringItem index="100" value="Mandarino"/>
+                <StringItem index="101" value="Marrone"/>
+                <StringItem index="102" value="Marrone chiaro"/>
+                <StringItem index="103" value="Marrone pastello"/>
+                <StringItem index="104" value="Marrone-rosso"/>
+                <StringItem index="105" value="Marrone sabbia chiaro"/>
+                <StringItem index="106" value="Marrone scuro"/>
+                <StringItem index="107" value="Melanzana"/>
+                <StringItem index="108" value="Nero"/>
+                <StringItem index="109" value="Ocra"/>
+                <StringItem index="110" value="Orchidea"/>
+                <StringItem index="111" value="Oliva chiaro"/>
+                <StringItem index="112" value="Oro"/>
+                <StringItem index="113" value="Oro vecchio"/>
+                <StringItem index="114" value="Oro vivo"/>
+                <StringItem index="115" value="Oro vivo smorto"/>
+                <StringItem index="116" value="Ottone antico"/>
+                <StringItem index="117" value="Papaya"/>
+                <StringItem index="118" value="Pervinca"/>
+                <StringItem index="119" value="Pesca"/>
+                <StringItem index="120" value="Pesca scuro"/>
+                <StringItem index="121" value="Pesca-arancio"/>
+                <StringItem index="122" value="Pesca-giallo"/>
+                <StringItem index="123" value="Porpora"/>
+                <StringItem index="124" value="Prugna"/>
+                <StringItem index="125" value="Rame"/>
+                <StringItem index="126" value="Rosa"/>
+                <StringItem index="127" value="Rosa-arancio"/>
+                <StringItem index="128" value="Rosa-ciliegia"/>
+                <StringItem index="129" value="Rosso mattone chiario"/>
+                <StringItem index="130" value="Rosa Mountbatten"/>
+                <StringItem index="131" value="Rosa pallido"/>
+                <StringItem index="132" value="Rosa pastello"/>
+                <StringItem index="133" value="Rosso sangue"/>
+                <StringItem index="134" value="Rosa scuro"/>
+                <StringItem index="135" value="Rosa shocking"/>
+                <StringItem index="136" value="ROsa medio"/>
+                <StringItem index="137" value="Rosa vivo"/>
+                <StringItem index="138" value="Rosso"/>
+                <StringItem index="139" value="Rosso aragosta"/>
+                <StringItem index="140" value="Rosso cardinale"/>
+                <StringItem index="141" value="Rosso fragola"/>
+                <StringItem index="142" value="Rosso-rosa"/>
+                <StringItem index="143" value="Rosso pompeiano"/>
+                <StringItem index="144" value="Rosso Tiziano"/>
+                <StringItem index="145" value="Rosso veneziano"/>
+                <StringItem index="146" value="Rosso violetto chiaro"/>
+                <StringItem index="147" value="Rosso violaceo"/>
+                <StringItem index="148" value="Rosso mattone"/>
+                <StringItem index="149" value="Rosso fuoco"/>
+                <StringItem index="150" value="Rosso pomodoro"/>
+                <StringItem index="151" value="Rubino"/>
+                <StringItem index="152" value="Sabbia"/>
+                <StringItem index="153" value="Salmone"/>
+                <StringItem index="154" value="Salmone scuro"/>
+                <StringItem index="155" value="Scarlatto"/>
+                <StringItem index="156" value="Scarlatto scuro"/>
+                <StringItem index="157" value="Seppia"/>
+                <StringItem index="158" value="Terra di Siena"/>
+                <StringItem index="159" value="Terra di Siena Bruciata"/>
+                <StringItem index="160" value="T&#xe8; verde"/>
+                <StringItem index="161" value="T&#xe8; verde scuro"/>
+                <StringItem index="162" value="Turchese"/>
+                <StringItem index="163" value="Turchese chiaro"/>
+                <StringItem index="164" value="Turchese pallido"/>
+                <StringItem index="165" value="Turchese scuro"/>
+                <StringItem index="166" value="Uovo di pettirosso"/>
+                <StringItem index="167" value="Verde"/>
+                <StringItem index="168" value="Verde caraibi"/>
+                <StringItem index="169" value="Verde foresta"/>
+                <StringItem index="170" value="Verde chiaro"/>
+                <StringItem index="171" value="Verde-giallo"/>
+                <StringItem index="172" value="Verde mare chiaro"/>
+                <StringItem index="173" value="Verde marino"/>
+                <StringItem index="174" value="Verde menta"/>
+                <StringItem index="175" value="Verde menta chiaro"/>
+                <StringItem index="176" value="Verde muschio"/>
+                <StringItem index="177" value="Verde oliva"/>
+                <StringItem index="178" value="Verde olivastro"/>
+                <StringItem index="179" value="Verde oliva-giallo"/>
+                <StringItem index="180" value="Verde oliva scuro"/>
+                <StringItem index="181" value="Verde pastello"/>
+                <StringItem index="182" value="Verde pastello scuro"/>
+                <StringItem index="183" value="Verde pino"/>
+                <StringItem index="184" value="Verde primavera"/>
+                <StringItem index="185" value="Verde primavera scuro"/>
+                <StringItem index="186" value="Verde scuro"/>
+                <StringItem index="187" value="Verde smeraldo"/>
+                <StringItem index="188" value="Verde Veronese"/>
+                <StringItem index="189" value="Vermiglio"/>
+                <StringItem index="190" value="Viola-melanzana"/>
+                <StringItem index="191" value="Viola scuro"/>
+                <StringItem index="192" value="Zaffiro"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBoxNumPorte">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="3"/>
+                <StringItem index="1" value="5"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBoxCarburante">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="6">
+                <StringItem index="0" value="Benzina"/>
+                <StringItem index="1" value="Diesel"/>
+                <StringItem index="2" value="GPL"/>
+                <StringItem index="3" value="Metano"/>
+                <StringItem index="4" value="Ibrida"/>
+                <StringItem index="5" value="Elettrica"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBoxAnnoProduz">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="67">
+                <StringItem index="0" value="1950"/>
+                <StringItem index="1" value="1951"/>
+                <StringItem index="2" value="1952"/>
+                <StringItem index="3" value="1953"/>
+                <StringItem index="4" value="1954"/>
+                <StringItem index="5" value="1955"/>
+                <StringItem index="6" value="1956"/>
+                <StringItem index="7" value="1957"/>
+                <StringItem index="8" value="1958"/>
+                <StringItem index="9" value="1959"/>
+                <StringItem index="10" value="1960"/>
+                <StringItem index="11" value="1961"/>
+                <StringItem index="12" value="1962"/>
+                <StringItem index="13" value="1963"/>
+                <StringItem index="14" value="1964"/>
+                <StringItem index="15" value="1965"/>
+                <StringItem index="16" value="1966"/>
+                <StringItem index="17" value="1967"/>
+                <StringItem index="18" value="1968"/>
+                <StringItem index="19" value="1969"/>
+                <StringItem index="20" value="1970"/>
+                <StringItem index="21" value="1971"/>
+                <StringItem index="22" value="1972"/>
+                <StringItem index="23" value="1973"/>
+                <StringItem index="24" value="1974"/>
+                <StringItem index="25" value="1975"/>
+                <StringItem index="26" value="1976"/>
+                <StringItem index="27" value="1977"/>
+                <StringItem index="28" value="1978"/>
+                <StringItem index="29" value="1979"/>
+                <StringItem index="30" value="1980"/>
+                <StringItem index="31" value="1981"/>
+                <StringItem index="32" value="1982"/>
+                <StringItem index="33" value="1983"/>
+                <StringItem index="34" value="1984"/>
+                <StringItem index="35" value="1985"/>
+                <StringItem index="36" value="1986"/>
+                <StringItem index="37" value="1987"/>
+                <StringItem index="38" value="1988"/>
+                <StringItem index="39" value="1989"/>
+                <StringItem index="40" value="1990"/>
+                <StringItem index="41" value="1991"/>
+                <StringItem index="42" value="1992"/>
+                <StringItem index="43" value="1993"/>
+                <StringItem index="44" value="1994"/>
+                <StringItem index="45" value="1995"/>
+                <StringItem index="46" value="1996"/>
+                <StringItem index="47" value="1997"/>
+                <StringItem index="48" value="1998"/>
+                <StringItem index="49" value="1999"/>
+                <StringItem index="50" value="2000"/>
+                <StringItem index="51" value="2001"/>
+                <StringItem index="52" value="2002"/>
+                <StringItem index="53" value="2003"/>
+                <StringItem index="54" value="2004"/>
+                <StringItem index="55" value="2005"/>
+                <StringItem index="56" value="2006"/>
+                <StringItem index="57" value="2007"/>
+                <StringItem index="58" value="2008"/>
+                <StringItem index="59" value="2009"/>
+                <StringItem index="60" value="2010"/>
+                <StringItem index="61" value="2011"/>
+                <StringItem index="62" value="2012"/>
+                <StringItem index="63" value="2013"/>
+                <StringItem index="64" value="2014"/>
+                <StringItem index="65" value="2015"/>
+                <StringItem index="66" value=" "/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldModello">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelDescrizione">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Descrizione"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextAreaDescrizione">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLTipologia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tipologia"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLCilindrata">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cilindrata"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldKmPercorsi">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldBaseAsta">
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonInvioDati">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Invia i dati"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonInvioDatiActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldCilindrata">
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonInserimentoImg">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Inserisci un&apos;immagine"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonInserimentoImgActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldInserimentoImg">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="--immagine non presente--"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

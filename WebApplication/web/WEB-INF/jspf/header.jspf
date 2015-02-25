@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Applicazioni e Servizi Web">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript,Applet,ASW">
+        <meta name="author" content="Edoardo Rosa, Roberto D'Elia, Federico Torsello">
+        <title>iCar?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" media="screen" href="css/style.css">
+        <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body onresize="resize(${param["logged"]});">
+        <header class="animation">
+            <a class="logo" href="index.jsp"><img src="css/img/logo.png" alt="logo"></a>
+            <a clasS="name" href="index.jsp">
+                <h1>iCar?</h1>
+            </a>
+            <div class="menu-nav">
+                <nav>
+                    <ul class="nav inline-items">
+                        <li>
+                            <a href="index.jsp">Home</a>
+                        </li>
+                        <li>
+                            <a href="insert.jsp">Inserisci</a>
+                        </li>
+                        <li>
+                            <a href="contacts.jsp">Contatti</a>
+                        </li>
+                        <li class="user-menu user">
+                            <a href="javascript:logout();">Logout</a>
+                        </li>
+                        <li class="user-menu user">
+                            |
+                        </li>
+                        <li class="user-menu">
+                            <a href="javascript:setVisible('banner');">Sign In</a>
+                        </li>
+                        <li class="user-menu">
+                            |
+                        </li>
+                        <li class="user-menu selected">
+                            <a href="register.jsp">Registrati</a>
+                        </li>
+                        <li class="user-menu user">
+                            <a href="user.jsp?userInfo=<%=session.getAttribute("user")%>"><%= session.getAttribute("user")%></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="columns-container">
