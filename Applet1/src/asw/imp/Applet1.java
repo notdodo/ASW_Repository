@@ -283,25 +283,9 @@ public class Applet1 extends javax.swing.JApplet {
 
     private void jButtonInserimentoImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInserimentoImgActionPerformed
         jFileChooser1.showOpenDialog(this);
-         fileSelected = jFileChooser1.getSelectedFile();
-        /*FileOpenService fos;
-        try {
-            fos = (FileOpenService) ServiceManager.lookup("javax.jnlp.FileOpenService");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            fos = null;
-        }
-        if (fos != null) {
-            try {
-                // ask user to select a file through this service 
-                FileContents fc = fos.openFileDialog(null, null);
-                // ask user to select multiple files through this service 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }*/
+        fileSelected = jFileChooser1.getSelectedFile();
         jTextFieldInserimentoImg.setText("Converto immagine...");
-        //new ImageLoader(this, fileSelected).start();
+        new ImageLoader(this, fileSelected).start();
     }//GEN-LAST:event_jButtonInserimentoImgActionPerformed
 
     private void jButtonInvioDatiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInvioDatiActionPerformed
