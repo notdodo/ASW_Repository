@@ -289,22 +289,28 @@ public class Applet1 extends javax.swing.JApplet {
     }//GEN-LAST:event_jButtonInserimentoImgActionPerformed
 
     private void jButtonInvioDatiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInvioDatiActionPerformed
+        boolean flag;
         if (jTextFieldModello.getText().isEmpty() || jTextFieldBaseAsta.getText().isEmpty() || jTextAreaDescrizione.getText().isEmpty()
                 || jTextFieldCilindrata.getText().isEmpty() || jTextFieldKmPercorsi.getText().isEmpty() || fileSelected == null) {
             JOptionPane.showMessageDialog(this, "Compila tutti i campi");
+            flag = false;
         } else {
             try {
                 Integer.parseInt(jTextFieldCilindrata.getText());
                 Integer.parseInt(jTextFieldKmPercorsi.getText());
                 Float.parseFloat(jTextFieldBaseAsta.getText());
+                flag = true;
             } catch (Exception e) {
+                flag = false;
                 JOptionPane.showMessageDialog(this, "Devi inserire un numero");
             }
-            new SubmitListener(Applet1.this, getParameter("user"), jTextAreaDescrizione.getText(), jTextFieldBaseAsta.getText(),
-                    jTextFieldCilindrata.getText(), jTextFieldKmPercorsi.getText(), jComboBoxAnnoProduz.getSelectedItem().toString(),
-                    jComboBoxCarburante.getSelectedItem().toString(), jComboBoxColore.getSelectedItem().toString(),
-                    jComboBoxMarca.getSelectedItem().toString(), jComboBoxNumPorte.getSelectedItem().toString(),
-                    jComboBoxTipologia.getSelectedItem().toString(), jTextFieldModello.getText(), imgBase64).execute();
+            if (flag) {
+                new SubmitListener(Applet1.this, getParameter("user"), jTextAreaDescrizione.getText(), jTextFieldBaseAsta.getText(),
+                        jTextFieldCilindrata.getText(), jTextFieldKmPercorsi.getText(), jComboBoxAnnoProduz.getSelectedItem().toString(),
+                        jComboBoxCarburante.getSelectedItem().toString(), jComboBoxColore.getSelectedItem().toString(),
+                        jComboBoxMarca.getSelectedItem().toString(), jComboBoxNumPorte.getSelectedItem().toString(),
+                        jComboBoxTipologia.getSelectedItem().toString(), jTextFieldModello.getText(), imgBase64).execute();
+            }
         }
     }//GEN-LAST:event_jButtonInvioDatiActionPerformed
 

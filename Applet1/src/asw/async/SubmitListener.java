@@ -79,6 +79,7 @@ public class SubmitListener extends SwingWorker<Object, Object> {
     protected Object doInBackground() throws Exception {
         System.out.println("[Swing Worker]: START!!");
         try {
+            //this.client.setBase(new URL("http://isi-tomcat.csr.unibo.it:8080/~edoardo.rosa/service"));
             this.client.setBase(new URL("http://localhost:8080/WebApplication/service"));
             Document doc = createXML();
             Document answer = this.client.execute("service", doc);

@@ -62,7 +62,7 @@ public class Service extends HttpServlet {
      * @param data XML Document
      * @param request HttpServletRequest for the servlet
      * @param response HttpServletRequest from the servlet
-     * @param mngXML Object of the library ManageXML 
+     * @param mngXML Object of the library ManageXML
      */
     private void operations(Document data, HttpServletRequest request, HttpServletResponse response, ManageXML mngXML) {
         Element root = data.getDocumentElement();
@@ -293,7 +293,7 @@ public class Service extends HttpServlet {
 
     /**
      * Receive the form submitted by POST
-     * 
+     *
      * @param request HttpServletRequest for the servlet
      * @param response HttpServletRequest from the servlet
      */
@@ -327,6 +327,7 @@ public class Service extends HttpServlet {
                 try {
                     if (mngdb.checkLogin(user, pass)) {
                         session.setAttribute("user", user);
+                        session.setAttribute("loginResult", "true");
                         session.setAttribute("logged", "true");
                         Cookie cookieLog = new Cookie("logged", "1");
                         Cookie cookieUse = new Cookie("user", user);
@@ -340,7 +341,7 @@ public class Service extends HttpServlet {
                         }
                         response.sendRedirect("index.jsp");
                     } else {
-                        session.setAttribute("logged", "false");
+                        session.setAttribute("loginResult", "false");
                         response.sendRedirect("index.jsp");
                     }
                 } catch (Exception ex) {

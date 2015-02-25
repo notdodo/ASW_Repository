@@ -1,5 +1,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% boolean logged = false;
+    // Controllo se i cookies sono settati
+    if (request.getCookies() != null) {
+        Cookie[] cookie = request.getCookies();
+        for (Cookie cook : cookie) {
+            if (cook.getName().equals("logged")) {
+                logged = cook.getValue().equals("1") ? true : false;
+            }
+            if (cook.getName().equals("user")) {
+                session.setAttribute("user", cook.getValue());
+            }
+        }
+    }
     session.removeAttribute("logged");
     if (session.getAttribute("user") != null) {
         logged = true;
