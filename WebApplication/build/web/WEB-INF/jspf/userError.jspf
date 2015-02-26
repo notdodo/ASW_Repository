@@ -1,3 +1,0 @@
-<h2>Errore</h2>
-<p>Nickname o password sbagliati</p>
-<p>Riprova il <a href="#" onclick="setVisible('banner');">login.</a></p>
