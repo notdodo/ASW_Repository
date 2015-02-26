@@ -42,7 +42,7 @@
 
     <hr>
     <h2>Realizzazione del sito</h2>
-    <p>Il sito è stato struttato secondo l'architettura <b>MVC</b>: le View sono le pagine JSP composte eventualmente da JSP Fragments, la <a href="javadoc_WebApplication/index.html">servlet</a> costituisce il Controller e il Model è definito da oggetti XML salvati sulla root path del server. La <a href="javadoc_WebApplication/index.html">servlet</a> delega il compito di generare le View da visualizzare all'utente ad una specifica JSP attraverso la tecnica di <b>forwarding</b>.</p>
+    <p>Il sito è stato struttato secondo l'architettura <b>MVC</b>: le View sono le pagine JSP composte eventualmente da JSP Fragments, la <a href="javadoc_WebApplication/index.html">servlet</a> costituisce il Controller e il Model è definito da oggetti XML salvati sul path del server. La <a href="javadoc_WebApplication/index.html">servlet</a> delega il compito di generare le View da visualizzare all'utente ad una specifica JSP attraverso la tecnica di <b>forwarding</b>.</p>
     <p>Il Controller fornisce una collezione di operation che rappresentano i servizi web richiamabili dal client.</p>
     <p>Il database è stato realizzato sfruttando documenti XML salvati nel path del server creati tramite un'apposita libreria.</p>
 
@@ -65,8 +65,8 @@
     <p>Questa pagina contiene il form di registrazione degli utenti al sito.</p>
 
     <h4>Tecnologie utilizzate</h4>
-    <p>Nella pagina di index vengono caricate le auto in vendita e le ultime inserite, si utilizzano, quindi, due WebWorker JavaScript che sfruttano thread secondari per la richieste al server. I WebWorker sfruttano AJAX per aprire una connessione e inviare dati in formato XML al Controller e attendono una risposta. L'utilizzo dei WebWorker permette di fare richieste HTTP in parallelo e velocizzare il caricamento della pagina.</p>
-    <p>Il login e la registrazione degli utenti sfruttano la tecnologia classica del Web: HTML Form. Compilando i dati richiesti il form esegue una richiesta alla <a href="javadoc_WebApplication/index.html">servlet</a> con metodo <i>POST</i> richiamando i relativi servizi "login" e "register". Il logout dell'utente viene gestito tramite JavaScript: viene creato un form che inviato tramite POST invoca il servizio "logout" della <a href="javadoc_WebApplication/index.html">servlet</a>.</p>
+    <p>Nella pagina di index vengono caricate le auto in vendita e le ultime inserite, si utilizzano, quindi, due WebWorker JavaScript che sfruttano thread secondari per la richieste al server. I WebWorker aprono una connessione e inviano dati in formato XML al Controller, attendendo una risposta. L'utilizzo dei WebWorker è unicamente a scopo didattico.</p>
+    <p>Il login e la registrazione degli utenti sfruttano la tecnologia classica del Web: HTML Form. Compilando i dati richiesti il form esegue una richiesta alla <a href="javadoc_WebApplication/index.html">servlet</a> con metodo <i>POST</i> richiamando i relativi metodi "login" e "register". Il logout dell'utente viene gestito tramite JavaScript: viene creato un form che inviato tramite POST invoca il metodo "logout" della <a href="javadoc_WebApplication/index.html">servlet</a>.</p>
     <p>L'inserimento di una nuova auto usata da vendere avviene attraverso una Applet Java (<i><a href="javadoc_Applet1/index.html">Applet1</a></i>) la quale è stata realizzata soltanto a fini didattici per sperimentare un approccio diverso dalla classica form HTML, o dall'utilizzo di AJAX, che ci ha permesso di capire pregi e difetti di questa tecnologia ormai in disuso.
         <br/> L'applet utilizza Swing per presentare all'utente l'interfaccia grafica per l'inserimento delle generalità dell'auto e un pulsante per l'invio dei dati al server. All'inserimento dell'immagine dell'auto un thread secondario utilizzerà i metodo messi a disposizione dalla classe <i>Base64Util</i> della libreria <i><a href="javadoc_Lib1/index.html">Lib1</a></i> per la codifica in <i>Base64</i> dell'immagine. Uno <i>SwingWorker</i> (<i>SubmitListner</i>) è utilizzato per creare e inviare il documento XML al server ed aggiornare l'intefaccia grafica dell'<i>Applet1</i> dell'avvenuto inserimento. Come per il WebWork un thread secondario permette di eseguire in background lunghe operazioni senza bloccare l'interfaccia grafica.</p>
     <p>L'<i><a href="javadoc_Applet1/index.html">Applet1</a></i>, in particolare il <i>SubmitListner</i> utilizza la classe di <i>Lib1</i> <i>ManageXML</i> per la creazione e gestione di oggetti XML.
@@ -94,7 +94,7 @@
             <li><b>showCars</b>
             </li>
             <ul>
-                <li>recupera le auto inserite presenti nel database forwarding della JSP "showroom.jsp", che genera la View, restituisce al client l'elenco delle auto. La pagina JSP visualizzata presenta l'elenco delle auto come una griglia di immagini. L'utente può cliccare su un'auto per visualizzarne i dettagli.</li>
+                <li>recupera le auto inserite presenti nel database ed esegue il forwarding alla JSP "showroom.jsp", che genera la View. La pagina JSP visualizzata presenta l'elenco delle auto come una griglia di immagini. L'utente può cliccare su un'auto per visualizzarne i dettagli.</li>
             </ul>
             <li><b>showUser</b>
             </li>
@@ -109,12 +109,12 @@
             <li><b>startAuction</b>
             </li>
             <ul>
-                <li>inserisce l'utente nell'elenco degli utenti interessati ad una specifica auto. L'elenco permette di inviare le notifiche solo a coloro che sono interessati e stanno partecipando l'asta. In aggiunta controlla che non siano già state fatte offerte e aggiorna il prezzo dell'auto con il totale dell'ultima offerta effettuata.</li>
+                <li>Viene invocato per dichiarare che un certo utente è interessato a partecipare ad una specifica asta. Ciò permette di inviare le eventuali notifiche solo a coloro che sono interessati ad una certa auto. In aggiunta controlla che non siano già state fatte offerte e aggiorna il prezzo dell'auto con il totale dell'ultima offerta effettuata.</li>
             </ul>
             <li><b>newOffer</b>
             </li>
             <ul>
-                <li>il servizio controlla che la nuova offerta sia accettabile e aggiorna il prezzo dell'auto. Tramite le notifiche BOSH tutti gli utenti interessati all'acuisto e che partecipano all'asta ricevono una notifica: il prezzo dell'auto viene aggiornato senza ricaricare la pagina.</li>
+                <li>il servizio controlla che la nuova offerta sia accettabile e aggiorna il prezzo dell'auto. Tramite le notifiche BOSH tutti gli utenti interessati all'acquisto e che partecipano all'asta ricevono una notifica: il prezzo dell'auto viene aggiornato senza ricaricare la pagina.</li>
             </ul>
             <li><b>getNotifications</b>
             </li>
@@ -137,7 +137,7 @@
                 <li>il servizio viene invocato una volta che l'utente proprietario di un'auto in vendita (che ha ricevuto offerte) decide di accettare l'ultima offerta. Il file XML dell'auto viene spostato nella cartella "vendute" e non sarà più possibile visualizzarla nello show room. Come conferma dell'avvenuta vendita all'utente viene presentata una JSP "sellcar.jsp".</li>
             </ul>
         </ul>
-        I servizi elencati vengono invocati tramite AJAX utlizzando come payload del messaggio un documento XML contenente il nome del servizio da utilizzare ed eventualmente i paremetri che esso necessita. I servizi che invece sono invocati tramite semplici chiamate di tipo POST sono:
+        I servizi elencati vengono invocati tramite AJAX utlizzando come payload del messaggio un documento XML contenente il nome del servizio da utilizzare ed eventualmente i paremetri che esso necessita. I metodi che invece sono invocati tramite semplici chiamate di tipo POST sono:
         <ul>
             <li><b>register</b>
             </li>
@@ -202,7 +202,7 @@
         <img src="schema.png" />
 
         <h3>Dati memorizzati sul server</h3>
-        <p>I file XML generati costituiscono un vero e proprio database in quanto vengono salvati nel server e sono quindi accessibili in qualsiasi momento.</p>
+        <p>I file XML relativi alle auto e agli utenti registrati sono salvati sul server e costituiscono il database.</p>
         <p>I file XML creati seguono un pattern ben preciso: la root descrive genericamente cosa verrà salvato ("user", "newCar"), i vari nodi figlio contengono le informazioni relative alla root.</p>
         <ul>
             <li>Auto: <a href="xsd/newCar.xsd">newCar.xsd</a>
