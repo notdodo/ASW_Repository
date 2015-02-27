@@ -143,6 +143,7 @@ function getNotifications() {
             if (answer.documentElement.tagName === "newOffer") {
                 var msg = answer.documentElement.childNodes[1].textContent;
                 document.getElementById("offer").innerHTML = "<label><b>Prezzo</b>: " + msg + "</label>";
+                document.getElementById("makeOffer").value = msg;
             } else
                 return;
             getNotifications();

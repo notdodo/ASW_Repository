@@ -1,13 +1,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%  boolean logged = false;
     boolean loginResult;
-
-    if(request.getHeader("User-Agent").indexOf("Firefox") >= 0)
+    session = request.getSession(false);
+    if(session == null)
+       session= request.getSession(true);
+    /*String browser = request.getHeader("User-Agent");
+    if (browser.indexOf("Firefox") >= 0) {
         // Firefox bug for tomcat: NEED TO SET JSESSIONID COOKIE
-    	Cookie id = new Cookie("JSESSIONID", session.getId());
-    	id.setMaxAge(60 * 60);
-    	response.addCookie(id);
-    }
+        session = request.getSession(true);
+        Cookie id = new Cookie("JSESSIONID", session.getId());
+        id.setMaxAge(60*60);
+        response.addCookie(id);
+    }*/
     // Controllo se i cookies sono settati
     if (request.getCookies() != null) {
         Cookie[] cookie = request.getCookies();
@@ -16,7 +20,7 @@
                 logged = cook.getValue().equals("1") ? true : false;
             }
             if (cook.getName().equals("user")) {
-                request.getSession().setAttribute("user", cook.getValue());
+                session.setAttribute("user", cook.getValue());
             }
         }
     }

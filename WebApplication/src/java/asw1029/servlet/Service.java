@@ -3,6 +3,7 @@ package asw1029.servlet;
 import asw1029.lib.ManageXML;
 import asw1029.utils.ManageDB;
 import java.io.*;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -72,7 +73,9 @@ public class Service extends HttpServlet {
         String realPath = getServletContext().getRealPath("");
         ManageDB mngdb = new ManageDB(realPath);
         ManageXML mngX = null;
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(false);
+        if (session == null)
+           session = request.getSession();
         HashMap<String, String> infoUser;
         HashMap<String, String> info;
         try {
@@ -261,8 +264,9 @@ public class Service extends HttpServlet {
             case "recentCars":
                 try {
                     HashMap<Date, String> date = mngdb.recentCars();
-                    Map<Date, String> sortedMap = new TreeMap<>(date);
-                    request.setAttribute("date", sortedMap);
+                    Map<Date, String> newMap = new TreeMap(Collections.reverseOrder());
+                    newMap.putAll(date);
+                    request.setAttribute("date", newMap);
                     request.getRequestDispatcher("WEB-INF/showrecent.jsp").forward(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
@@ -300,12 +304,9 @@ public class Service extends HttpServlet {
     private void submitForm(HttpServletRequest request, HttpServletResponse response) {
         String realPath = getServletContext().getRealPath("");
         ManageDB mngdb = new ManageDB(realPath);
-        HttpSession session = request.getSession();
-        try {
-            ManageXML mngxml = new ManageXML();
-        } catch (TransformerConfigurationException | ParserConfigurationException ex) {
-            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        HttpSession session = request.getSession(false);
+        if (session == null)
+           session = request.getSession();
         switch (request.getParameter("submitPost")) {
             case "register":
                 String nome = (String) request.getParameter("nome");
@@ -339,11 +340,10 @@ public class Service extends HttpServlet {
                             this.users.put(user, new LinkedList<Document>());
                             this.interests.put(user, "");
                         }
-                        response.sendRedirect("index.jsp");
                     } else {
                         session.setAttribute("loginResult", "false");
-                        response.sendRedirect("index.jsp");
                     }
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
                 } catch (Exception ex) {
                     Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -351,6 +351,7 @@ public class Service extends HttpServlet {
             case "logout":
                 session.invalidate();
                 for (Cookie cookie : request.getCookies()) {
+                    cookie.setValue("");
                     cookie.setMaxAge(0);
                     response.addCookie(cookie);
                 }

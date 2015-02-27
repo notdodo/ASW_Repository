@@ -21,10 +21,9 @@ function getXMLObject() {
 }
 
 function receiveMessage(e) {
-
     var xmlhttp = new getXMLObject();
-    //xmlhttp.open("POST", "/~edoardo.rosa/service", true);
-    xmlhttp.open("POST", "/WebApplication/service", true);
+    xmlhttp.open("POST", "/~edoardo.rosa/service", true);
+    //xmlhttp.open("POST", "/WebApplication/service", true);
     xmlhttp.setRequestHeader("Content-Type", "text/xml");
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
