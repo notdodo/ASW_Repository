@@ -163,6 +163,7 @@ function check(car, price) {
 
 function sendOffer(car, offer) {
     var xmlhttp = new XMLHttpRequest();
+    if (document.cookie.search("logged") >= 0) {
     xmlhttp.open("POST", "service", true);
     xmlhttp.setRequestHeader("Content-Type", "text/xml");
     var data = document.implementation.createDocument("", "newOffer", null);
@@ -184,8 +185,10 @@ function sendOffer(car, offer) {
                 document.getElementById("result").innerHTML = "Devi inserire un valore maggiore dell'offerta precedente";
         }
     };
-
     xmlhttp.send(data);
+    }else {
+        window.location.href = "index.jsp";
+    }
 }
 
 function showOffer(car, price) {
@@ -212,7 +215,7 @@ function showOffer(car, price) {
     xmlhttp.send(data);
     var sendAuction = document.getElementById("sendAuction");
     var inp = document.getElementById("makeOffer");
-    if (inp.type === "hidden") {
+    if (inp.type === "hidden" && document.cookie.search("logged") >= 0) {
         inp.type = "number";
         var send = document.createElement("button");
         send.name = "sendOffer";
@@ -224,6 +227,8 @@ function showOffer(car, price) {
         send.onclick = function () {
             check(car, price);
         };
+    } else {
+        alert("Devi eseguire il login");
     }
 }
 
